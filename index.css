@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Cursed timer';
+  src: url('./assets/font/cursed-timer.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  font-family: 'Cursed timer', sans-serif;
+  background: url('./assets/image/basketball.avif') no-repeat center/cover;
+}
+
+main {
+  text-align: center;
+  & h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.8rem);
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-shadow: -.2rem -.2rem #001F3F, .1rem .1rem #FFC93C;
+  }
+}
+
+.container {
+  padding: 2rem 1rem;
+  margin-inline: auto;
+  inline-size: 88vw;
+  max-inline-size: 575px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background: hsl(221, 76%, 10%, .5);
+  backdrop-filter: blur(2px);
+  border-radius: .5rem;
+  color: hsl(0, 0%, 93%);
+  text-align: center;
+  
+  & button {
+    padding-block: .65rem;
+    inline-size: 100%;
+    max-inline-size: 13rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #001F3F;
+    border-radius: .5rem;
+    border: none;
+    color: #FFC93C;
+  }
+}
+
+.team {
+  flex-grow: 1;
+  display: grid;
+  justify-content: center;
+  row-gap: 1rem;
+  /* color: #022C43; */
+
+  & h2 {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-size: 40px; */
+    /* font-size: 28.8px; */
+    font-size: clamp(1.8rem, 1.2rem + 2.5vw, 2.5rem);
+    text-transform: uppercase;
+    text-shadow: .2rem .2rem #001F3F, -.1rem -.1rem #FFC93C;
+  }
+}
+
+.score {
+  padding-block: .95rem;
+  inline-size: 155px;
+  font-size: clamp(4.5rem, 3rem + 6vw, 5.6rem);
+  background-color: #022C43;
+  border-radius: .35rem;
+  color: #FFC93C;
+}
+
+.button-wrap {
+  max-inline-size: 155px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #EEEEEE;
+
+  & button {
+    margin: 0;
+    inline-size: 45px;
+    block-size: 45px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid currentColor;
+    border-radius: .35rem;
+    color: inherit;
+    text-shadow: 0 0 1px black;
+  }
+}
